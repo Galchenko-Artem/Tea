@@ -7,7 +7,7 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       title: {
         type: Sequelize.STRING
@@ -21,7 +21,7 @@ module.exports = {
       },
       imgLink: {
         type: Sequelize.STRING,
-      }
+      },
       // createdAt: {
       //   allowNull: false,
       //   type: Sequelize.DATE
