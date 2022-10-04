@@ -13,10 +13,21 @@ module.exports = {
         type: Sequelize.STRING
       },
       user_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Users',
+          key: 'id',
+        },
       },
       tea_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Teas',
+          key: 'id',
+        }
+      },
+      deleted_at: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
