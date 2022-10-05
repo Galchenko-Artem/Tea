@@ -13,10 +13,10 @@ module.exports = function TeaDescr(props) {
           <div className="headline">{props.title}</div>
         </div>
 
-        <div className="row">
+        <div className="row teabox">
           <div className="col">
-            <div className="image">
-              <img src={imgLink} alt="" />
+            <div >
+              <img src={imgLink} className="image" alt="tea" />
             </div>
           </div>
           <div className="col">
