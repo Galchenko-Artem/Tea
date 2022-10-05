@@ -26,5 +26,4 @@ function Login() {
   </Layout>
   );
 }
-
 module.exports = Login;
