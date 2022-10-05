@@ -14,6 +14,7 @@ const app = express();
 const mainRouter = require('./routes/mainRouter');
 const regRouter = require('./routes/regRouter');
 const loginRouter = require('./routes/loginRouter');
+const mapRouter = require('./routes/mapRouter');
 
 app.use(morgan('dev'));
 
@@ -26,6 +27,7 @@ const { PORT } = process.env;
 app.use('/', mainRouter);
 app.use('/registration', regRouter);
 app.use('/login', loginRouter);
+app.use('/map', mapRouter);
 
 app.listen(PORT, async () => {
   try {
