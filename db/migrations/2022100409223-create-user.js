@@ -21,14 +21,6 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      tea_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'Teas',
-          key: 'id',
-        }
-
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

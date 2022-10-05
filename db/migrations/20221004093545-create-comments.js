@@ -24,10 +24,10 @@ module.exports = {
         references: {
           model: 'Teas',
           key: 'id',
-        }
+        },
       },
-      deleted_at: {
-        type: Sequelize.STRING
+      deletedAt: {
+        type: Sequelize.DATE,
       },
       createdAt: {
         allowNull: false,
