@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
-
+.ymaps-2-1-79-copyrights-pane {
+  display: none;
+}
 .teawrap {
   /* background-image: url("../img/oldmap.jpg"); */
 }

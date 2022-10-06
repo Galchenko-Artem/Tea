@@ -1,5 +1,7 @@
 ymaps.ready(init);
 
+const comButtton = document.querySelector('#showCommentButton')
+
 async function getMark() {
     const resul = await fetch('/', {
         method: 'POST',
@@ -15,7 +17,8 @@ async function getMark() {
 }
 const allMArk = getMark()
 
-
+allMArk.forEach(element => {
+});
 
 
 
