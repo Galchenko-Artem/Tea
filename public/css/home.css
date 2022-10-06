@@ -1,0 +1,23 @@
+
+.container-fluid{
+  background-image: url(../img/Снимок\ экрана\ от\ 2022-10-06\ 15-34-07.jpg);
+  height:100px;
+  background-size: 400px;
+  margin-top: 0;
+
+}
+
+
+
+.navbar-brand{
+  color: #FFFFFF;
+  font-size: 30px;
+}
+.nav-link{
+  color: #FFFFFF;
+  font-size: 20px;
+}
+body{
+  /* background-image: url(../img/1621868729.jpg); */
+  background: #f1f5fe;
+}
