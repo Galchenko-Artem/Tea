@@ -14,26 +14,27 @@ function init(){
         // https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/controls/standard-docpage/
         controls: [
             'typeSelector', // Переключатель слоев карты
-            'fullscreenControl', // Полноэкранный режим
         ]
     });
     // Собственное изображение для метки с контентом
     let placemark4 = new ymaps.Placemark([55.79741725173239, 37.775391805417016], {
-        hintContent: '>>>>',
+        hintContent: 'Чай',
     }, {
         // Опции.
         // Необходимо указать данный тип макета.
         iconLayout: 'default#image',
         // Своё изображение иконки метки.
-        iconImageHref: '//codd-wd.ru/wp-content/examples/pic/web-app-development-q32.png',
+        iconImageHref: '/img/leaf.png',
         // Размеры метки.
-        iconImageSize: [10, 10],
+        iconImageSize: [15, 15],
         // Смещение левого верхнего угла иконки относительно
         // её "ножки" (точки привязки).
         iconImageOffset: [-16, -16],
     });
     // После того как метка была создана, добавляем её на карту.
     myMap.geoObjects.add(placemark4);
+
+
   }
 
 
