@@ -1,5 +1,40 @@
 ymaps.ready(init);
 
+async function getMark() {
+    const resul = await fetch('/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        // body: 'foo=bar&lorem=ipsum'
+    })
+    const teaMark = await resul.json()
+
+    console.log(resul);
+    console.log('TeaMark', teaMark);
+}
+const allMArk = getMark()
+
+
+
+
+
+// fetch('https://example.com/profile', {
+//   method: 'POST', // or 'PUT'
+//   headers: {
+//     'Content-Type': 'application/json',
+//   },
+//   body: JSON.stringify(data),
+// })
+
+
+
+
+
+
+
+
+
 function init(){
     // Создание карты.
     // https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/map-docpage/
@@ -9,25 +44,24 @@ function init(){
         center: [55.76, 37.64],
         // Уровень масштабирования. Допустимые значения:
         // от 0 (весь мир) до 19.
-        zoom:1,
+        zoom: 2,
         // Элементы управления
         // https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/controls/standard-docpage/
         controls: [
             'typeSelector', // Переключатель слоев карты
-            'fullscreenControl', // Полноэкранный режим
         ]
     });
     // Собственное изображение для метки с контентом
     let placemark4 = new ymaps.Placemark([55.79741725173239, 37.775391805417016], {
-        hintContent: '>>>>',
+        hintContent: 'Чай пуэр',
     }, {
         // Опции.
         // Необходимо указать данный тип макета.
         iconLayout: 'default#image',
         // Своё изображение иконки метки.
-        iconImageHref: '//codd-wd.ru/wp-content/examples/pic/web-app-development-q32.png',
+        iconImageHref: '/img/leaf.png',
         // Размеры метки.
-        iconImageSize: [10, 10],
+        iconImageSize: [20, 20],
         // Смещение левого верхнего угла иконки относительно
         // её "ножки" (точки привязки).
         iconImageOffset: [-16, -16],
@@ -87,3 +121,17 @@ function init(){
     //     });
     //   }
     //   getTeaData();
+document.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const url = event.target.action;
+    console.log("▶ ⇛ url", url);
+    const method = event.target.method;
+    const title = event.target.title.value;
+    const description = event.target.description.value;
+
+    const body = JSON.stringify({
+        title,
+        description,
+    });
+
+})

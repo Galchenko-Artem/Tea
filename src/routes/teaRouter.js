@@ -7,6 +7,7 @@ const TeaDescr = require('../views/TeaDescript');
 
 
 router.get('/:id', async (req, res) => {
+  const newUser = req.session?.newUser;
   // Получаем id чая методом GET
   const teaId = req.params.id;
   try {
@@ -14,7 +15,7 @@ router.get('/:id', async (req, res) => {
     const result = await db.Tea.findOne({ where: { id: teaId }, raw: true });
     // const toRender = JSON.stringify(result, null);
     // Передали данные о чае пропсом в рендер
-    renderTemplate(TeaDescr, result, res);
+    renderTemplate(TeaDescr, { result, newUser }, res);
   } catch (err) {
     console.log(err);
   }
