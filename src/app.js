@@ -15,7 +15,7 @@ const app = express();
 const homeRouter = require('./routes/homeRouter');
 const regRouter = require('./routes/regRouter');
 const loginRouter = require('./routes/loginRouter');
-const mapRouter = require('./routes/mapRouter');
+// const mapRouter = require('./routes/mapRouter');
 const teaDescrRouter = require('./routes/teaRouter');
 
 app.use(morgan('dev'));
@@ -59,7 +59,7 @@ app.get('/logout', (req, res) =>{
 app.use('/', homeRouter);
 app.use('/registration', regRouter);
 app.use('/login', loginRouter);
-app.use('/map', mapRouter);
+// app.use('/map', mapRouter);
 app.use('/descr', teaDescrRouter);
 
 
