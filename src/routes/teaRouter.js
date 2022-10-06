@@ -7,11 +7,13 @@ const TeaDescr = require('../views/TeaDescript');
 
 
 router.get('/:id', async (req, res) => {
-  // Получаем id чая
+  // Получаем id чая методом GET
   const teaId = req.params.id;
   try {
+    // Получили с бд данные о чае по id
     const result = await db.Tea.findOne({ where: { id: teaId }, raw: true });
-    const toRender = JSON.stringify(result, null);
+    // const toRender = JSON.stringify(result, null);
+    // Передали данные о чае пропсом в рендер
     renderTemplate(TeaDescr, result, res);
   } catch (err) {
     console.log(err);
