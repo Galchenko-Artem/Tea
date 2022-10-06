@@ -9,7 +9,7 @@ function init(){
         center: [55.76, 37.64],
         // Уровень масштабирования. Допустимые значения:
         // от 0 (весь мир) до 19.
-        zoom:1,
+        zoom:2,
         // Элементы управления
         // https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/controls/standard-docpage/
         controls: [
@@ -32,7 +32,6 @@ function init(){
         // её "ножки" (точки привязки).
         iconImageOffset: [-16, -16],
     });
-
     // После того как метка была создана, добавляем её на карту.
     myMap.geoObjects.add(placemark4);
   }
