@@ -11,7 +11,7 @@ function Registration() {
         Регистрация
       </h1>
       <div className="form-fields">
-        <div className="form-field">
+        <div className="form-field">=
           <input name="name" type="text" placeholder="Имя"/>
         </div>
         <div className="form-field">

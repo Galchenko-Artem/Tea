@@ -12,32 +12,32 @@ module.exports = {
         title: 'Пуэр',
         descriptions: 'постферментированный чай, считается одним из самых дорогих сортов чая в мире',
         location: 'Китай',
-        imgLink: '/img/tea.jpeg',
+        imgLink: '/img/puer.jpg',
       }, {
         title: 'Ройбуш',
         descriptions: 'Африканский красный рассыпной листовой чай',
         location: 'Южная Африка',
-        imgLink: '/img/tea.jpeg',
+        imgLink: '/img/roybush.jpg',
       }, {
         title: 'Bubble Tea',
         descriptions: 'Стал мировым феноменом, корни которого произрастают из Тайваня',
         location: 'Тайвань',
-        imgLink: '/img/tea.jpeg',
+        imgLink: '/img/buble.jpg',
       }, {
         title: 'матча',
         descriptions: 'японский порошковый зеленый чай',
         location: 'Япония',
-        imgLink: '/img/tea.jpeg',
+        imgLink: '/img/matcha.jpeg',
       }, {
         title: 'масала',
         descriptions: 'напиток родом с Индийского субконтинента',
         location: 'Индия',
-        imgLink: '/img/tea.jpeg',
+        imgLink: '/img/masala.jpg',
       }, {
         title: 'часуйма',
         descriptions: 'Тибетский чай часуйма изготавливается из китайского прессованного пуэра чай',
         location: 'Тибет',
-        imgLink: '/img/tea.jpeg',
+        imgLink: '/img/chasuyma.jpg',
       }
     ], {});
   },

@@ -46,5 +46,4 @@ ymaps.ready(() => {
     }
     getMark()
     
-      
-  
+    
