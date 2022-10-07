@@ -1,3 +1,6 @@
+// ymaps.ready(init);
+
+
 async function getMark(){
   const resul = await fetch('/',{
       method: 'POST',

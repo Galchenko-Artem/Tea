@@ -49,10 +49,8 @@ async function getComments(teaId) {
       commObj.usName = nameFromDb.name
       arr.push(commObj)
     }
-
     console.log('END_________', commentFromDb)
     return arr
-
   } catch (error) {
     return false
   }
