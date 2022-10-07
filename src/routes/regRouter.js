@@ -18,6 +18,11 @@ router.post('/', async (req, res) => {
   console.log("▶ ⇛ name email", name, email, password);
   console.log('In regRouters');
   try {
+    const user = await User.findOne({ where: { email }});
+    if(user){
+      res.redirect('/login')
+      return
+    }
     const hash = await bcrypt.hash(password, 10);
     const newUser = await User.create({ name, email, password: hash });
     req.session.newUser = newUser.name;
