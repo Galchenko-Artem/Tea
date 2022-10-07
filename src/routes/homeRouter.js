@@ -1,13 +1,23 @@
 const express = require('express');
-
+const db = require('../../db/models');
 const router = express.Router();
 
 const Home = require('../views/Home');
 const renderTemplate = require('../lib/renderTemplat');
+const { Tea } = require('../../db/models');
 
-router.get('/', (req, res) => {
-  const newUser = req.session?.newUser;
-  renderTemplate(Home, { newUser }, res);
-});
+router.get('/', async (req, res) => {
+    // получаем метки для карты Tea с базы, таблицы Teas 
+    const teaMark = await Tea.findAll({ attributes: ['title', 'location', 'id'], raw: true });
+    const newUser = req.session?.newUser;
+    renderTemplate(Home, { newUser, teaMark }, res);
+  }).post('/', async (req, res) => {
+    try {
+      const teaMark = await Tea.findAll({ attributes: ['title', 'location', 'id'], raw: true });
+      res.json(teaMark);
+    } catch (error) {
+      console.log(error);
+    }
+  });
 
 module.exports = router;

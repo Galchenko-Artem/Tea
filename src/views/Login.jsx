@@ -12,6 +12,7 @@ function Login() {
     </h1>
     <div className="form-fields">
       <div className="form-field">
+
         <input name="email" type="text" placeholder="Почта"/>
       </div>
       <div className="form-field">

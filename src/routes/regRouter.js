@@ -14,6 +14,9 @@ router.get('/', (req, res) => {
 
 router.post('/', async (req, res) => {
   const { name, email, password } = req.body;
+  console.log("▶ ⇛ req.body", req.body);
+  console.log("▶ ⇛ name email", name, email, password);
+  console.log('In regRouters');
   try {
     const user = await User.findOne({ where: { email }});
     if(user){
@@ -24,9 +27,11 @@ router.post('/', async (req, res) => {
     const newUser = await User.create({ name, email, password: hash });
     req.session.newUser = newUser.name;
     req.session.save(() => {
+      console.log('Создали Юзера в regrouters');
       res.redirect('/');
     })
   } catch (error) {
+    console.log('Error in regRouters');
     res.send(`Error ------> ${error}`);
   }
 });

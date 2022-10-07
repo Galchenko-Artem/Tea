@@ -1,13 +1,16 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function Home({ newUser }) {
+module.exports = function Home({ newUser, teaMark }) {
+  console.log(newUser);
+  console.log(teaMark);
   return (
     <Layout newUser={newUser}>
       <link rel="stylesheet" href="css/home.css" />
       <h1>Добро пожаловать в мир чая! {' '} {newUser}</h1>
       <div id="map" className="map"> </div>
-      <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+      <script src="https://api-maps.yandex.ru/2.1/?apikey=66aa6850-5430-4a22-8e63-26a8fe081633&lang=ru_RU" type="text/javascript"></script>
+      <script defer src="/js/script.js"></script>
       <div className='info'>
         <p>
         Наш сайт посвящен чаю и всему, что с ним связано. На страницах нашего сайта Вы найдете информацию о различных сортах чая, от традиционного черного до изысканного белого. Мы расскажем о том, где выращиваются и как производятся различные сорта чая, а также о том, как их правильно приготовить. Вы узнаете о том, какими положительными свойствами обладает чай, и какие меры предосторожности стоит соблюдать при его употреблении. А также вы сможете высказать свое мнение о различных марках чая.
