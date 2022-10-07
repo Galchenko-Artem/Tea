@@ -16,6 +16,10 @@ router.post('/', async (req, res) => {
   const {name, email, password } = req.body;
   try {
     const user = await User.findOne({ where: { email } });
+    if(!user){
+      res.redirect('/registration')
+      return
+    }
     const passCheck = await bcrypt.compare(password, user.password);
     if(passCheck){
       req.session.newUser = user.name;
