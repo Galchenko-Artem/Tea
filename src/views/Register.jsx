@@ -11,14 +11,14 @@ function Registration() {
         Регистрация
       </h1>
       <div className="form-fields">
-        <div className="form-field">
-              <input name="name" type="text" placeholder="Имя" />
+        <div className="form-field">=
+          <input name="name" type="text" placeholder="Имя"/>
         </div>
         <div className="form-field">
-              <input name="email" type="email" placeholder="Почта" />
+          <input name="email" type="text" placeholder="Почта"/>
         </div>
         <div className="form-field">
-              <input name="password" type="password" placeholder="Пароль" />
+          <input name="password" type="password" placeholder="Пароль"/>
         </div>
       </div>
       <div className="form-buttons">
