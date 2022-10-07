@@ -15,22 +15,40 @@ module.exports = function TeaDescr({ result, newUser, comments }) {
           </div>
         </div>
       </div>
-      <div className="container-fluid">
+
+      <div className="container">
         <div className="row teabox">
-          <div className="col-sm-2"></div>
           <div className="col-sm-4">
             <div >
               <img src={imgLink} className="image" alt="tea" />
             </div>
           </div>
-          <div className="col-sm-4">
+          <div className="col-sm-8">
             <div className="descr">{result.descriptions}</div>
           </div>
-          <div className="col-sm-2"></div>
         </div>
       </div>
+      <div className="container">
+        <div className="row butgroup">
+          <div className="col-sm"></div>
+          <div className="col-sm">
+            <button id="comButtton" type="button" className="btn btn-primary">Коментарии</button>
+          </div>
+          {(newUser) ?
+            <div className="col-sm"><button id="comButtton2" type="button" className="btn btn-primary">Добавить</button></div>
 
-      <button id="comButtton" type="button" className="btn btn-primary">Коментарии</button>
+            : <div className="col-sm" style={{ display: 'none' }}>
+              <button id="comButtton2" type="button" className="btn btn-primary">Добавить</button></div>
+
+          }
+
+          <div className="col-sm"></div>
+        </div>
+
+
+
+      </div>
+
       <script defer src='/js/teapageScript.js'></script>
       <Comment comments={comments}></Comment>
 
