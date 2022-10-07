@@ -15,10 +15,9 @@ const app = express();
 const homeRouter = require('./routes/homeRouter');
 const regRouter = require('./routes/regRouter');
 const loginRouter = require('./routes/loginRouter');
-// const mapRouter = require('./routes/mapRouter');
 const teaDescrRouter = require('./routes/teaRouter');
 const getTeaMarkRouter = require('./routes/getTeaMark');
-// const showCommentRouter = require('./routes/getCommentsRouter');
+const personalRouter = require('./routes/personalRouter');
 
 app.use(morgan('dev'));
 
@@ -62,9 +61,8 @@ app.use('/', homeRouter);
 app.use('/', getTeaMarkRouter);
 app.use('/registration', regRouter);
 app.use('/login', loginRouter);
-// app.use('/map', mapRouter);
 app.use('/descr', teaDescrRouter);
-// app.use('/comment', showCommentRouter);
+app.use('/personal', personalRouter);
 
 
 app.listen(PORT, async () => {

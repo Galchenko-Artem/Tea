@@ -2,4 +2,6 @@
     width: 1000px;
     height: 630px;
     background-color: black;
+    position: absolute;
+    left: 50px;
 }
