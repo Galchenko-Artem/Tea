@@ -11,7 +11,8 @@ module.exports = function Comment({ comments }) {
       {(comments.length)
         ? comments.map((el) => (
 
-          <><div className="container-fluid"><div className="row"><div className="col-4 commetUser">{el.usName}</div><div className="col-8 commetbody">{el.body}</div></div></div></>)) : <p></p>
+          <><div className="container"><div className="row onecommentBlock"><div className="col-1 commetIcon"><img src="/img/user.png" /></div><div className="col-2 commetUser">{el.usName}</div><div className="col-9 commetbody">{el.body}</div></div></div></>))
+        : <><div className="container"><div className="row onecommentBlock"><div className="col-1 commetIcon"><img src="/img/user.png" /></div><div className="col-9 commetbody">Здесь пока нет комментариев. Можете добавить свой.</div></div></div></>
       }
     </div >
   )
