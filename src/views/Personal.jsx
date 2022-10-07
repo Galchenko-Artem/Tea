@@ -16,7 +16,7 @@ module.exports = function Personal(props) {
 
        <div class="input-group flex-nowrap">
           <span class="input-group-text" id="addon-wrapping">@</span>
-          <input type="text" class="form-control" placeholder="Локацыя" aria-label="Имя пользователя" aria-describedby="addon-wrapping"/>
+          <input type="text" class="form-control" placeholder="Локация" aria-label="Имя пользователя" aria-describedby="addon-wrapping"/>
        </div>
       
     </Layout>
