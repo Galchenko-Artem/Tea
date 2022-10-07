@@ -5,10 +5,11 @@ module.exports = function Home({ newUser }) {
   return (
     <Layout newUser={newUser}>
       <link rel="stylesheet" href="css/home.css" />
-      <h1>Добро пожаловать в мир чая! {' '} {newUser}</h1>
-      <div className="container">
-        <div id="maps" className="map"> </div>
-        <div className='info'>
+
+      <h1>Добро пожаловать в мир чая!</h1>
+      <div id="maps" className="map"> </div>
+     <script src="https://api-maps.yandex.ru/2.1/?apikey=a7006369-0322-492b-a3b1-cc11d76d3ed5&lang=ru_RU" type="text/javascript"></script>
+     <div className='info'>
         <p>
         Наш сайт посвящен чаю и всему, что с ним связано. На страницах нашего сайта Вы найдете информацию о различных сортах чая, от традиционного черного до изысканного белого. Мы расскажем о том, где выращиваются и как производятся различные сорта чая, а также о том, как их правильно приготовить. Вы узнаете о том, какими положительными свойствами обладает чай, и какие меры предосторожности стоит соблюдать при его употреблении. А также вы сможете высказать свое мнение о различных марках чая.
         </p>

@@ -1,5 +1,7 @@
 .map{
-    width: 50%;
-        height: 400px;
-        background-color: rgb(5, 100, 20);
+    width: 1000px;
+    height: 630px;
+    background-color: black;
+    position: absolute;
+    left: 50px;
 }
