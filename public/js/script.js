@@ -1,6 +1,10 @@
 ymaps.ready(init);
 
-const comButtton = document.querySelector('#showCommentButton')
+// const comButtton = document.getElementById('showCommentButton');
+
+// comButtton.onclick = function () {
+//     console.log('On CLick');
+// }
 
 async function getMark() {
     const resul = await fetch('/', {
@@ -10,15 +14,28 @@ async function getMark() {
         },
         // body: 'foo=bar&lorem=ipsum'
     })
+
+
     const teaMark = await resul.json()
 
     console.log(resul);
     console.log('TeaMark', teaMark);
-}
-const allMArk = getMark()
 
-allMArk.forEach(element => {
-});
+
+
+
+
+}
+
+async function getgeo() {
+    const myGeocoder = await ymaps.geocode("Moscow");
+    console.log(myGeocoder);
+}
+
+
+const allMArk = getMark()
+// getgeo()
+
 
 
 
@@ -54,6 +71,31 @@ function init(){
             'typeSelector', // Переключатель слоев карты
         ]
     });
+
+    const address = 'Москва, ул. Льва Толстого, 16';
+
+    // Ищем координаты указанного адреса
+    // https://tech.yandex.ru/maps/doc/jsapi/2.1/ref/reference/geocode-docpage/
+    const geocoder = ymaps.geocode(address);
+
+    // После того, как поиск вернул результат, вызывается callback-функция
+    geocoder.then(
+        function (res) {
+            var coordinates = res.geoObjects.get(0).geometry.getCoordinates();
+            console.log(coordinates);
+        })
+
+
+
+
+
+
+
+
+
+
+
+
     // Собственное изображение для метки с контентом
     let placemark4 = new ymaps.Placemark([55.79741725173239, 37.775391805417016], {
         hintContent: 'Чай пуэр',

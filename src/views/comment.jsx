@@ -1,10 +1,19 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function Comment(props) {
+module.exports = function Comment({ comments }) {
 
-  console.log('IN COMMENT Views--------->', props);
+  console.log('IN COMMENT Views--------->', comments);
   return (
-    <div className="comment"> Здесь блок Views Коментарии</div>
+
+    <div className="commentBlock">
+      {/* <div className="comment"> */}
+      {(comments.length)
+        ? comments.map((el) => (
+
+          <><div className="container-fluid"><div className="row"><div className="col-4 commetUser">{el.usName}</div><div className="col-8 commetbody">{el.body}</div></div></div></>)) : <p></p>
+      }
+    </div >
   )
+
 };

@@ -2,10 +2,9 @@ const React = require('react');
 const Layout = require('./Layout');
 const Comment = require('./comment')
 
-module.exports = function TeaDescr({ result, newUser }) {
-  console.log('In DESC RENDER result', result);
+module.exports = function TeaDescr({ result, newUser, comments }) {
+  console.log('In DESC RENDER result', comments);
   let imgLink = `${result.imgLink}`
-  const test = <Comment data={imgLink} />
   return (
     <Layout newUser={newUser}>
       <div className="container-fluid teawrap">
@@ -18,20 +17,23 @@ module.exports = function TeaDescr({ result, newUser }) {
       </div>
       <div className="container-fluid">
         <div className="row teabox">
-          <div className="col-sm-6">
+          <div className="col-sm-2"></div>
+          <div className="col-sm-4">
             <div >
               <img src={imgLink} className="image" alt="tea" />
             </div>
           </div>
-          <div className="col-sm-6">
+          <div className="col-sm-4">
             <div className="descr">{result.descriptions}</div>
           </div>
+          <div className="col-sm-2"></div>
         </div>
       </div>
 
+      <button id="comButtton" type="button" className="btn btn-primary">Коментарии</button>
+      <script defer src='/js/teapageScript.js'></script>
+      <Comment comments={comments}></Comment>
 
-      <button type="button" className="btn btn-primary">Коментарии</button>
-      <Comment></Comment>
 
     </Layout >
   )
