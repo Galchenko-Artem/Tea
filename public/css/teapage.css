@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
+.ymaps-2-1-79-copyrights-pane {
+  display: none;
+}
+.ymaps-2-1-79-controls__toolbar {
+  display: none;
+}
+.teawrap {
+  /* background-image: url("../img/oldmap.jpg"); */
+}
+.commentBlock {
+  display: none;
+}
+.commentBlock .contaner {
+  margin-bottom: 10px;
+}
+.image {
+  width: 100%;
+  border-radius: 16px;
+}
+/* .butgroup {
+  margin-bottom: 10px;
+} */
+
+.butgroup .col-sm {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.butgroup button {
+  width: 100%;
+}
+.headline {
+  text-align: center;
+  margin: 10px auto;
+  font-family: 'Comfortaa', bold;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.headline p::after {
+  content: "";
+  background-image: url(/img/leaf.png);
+  margin-left: 5px;
+  width: 5%;
+  height: 5%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  /* right: 0px; */
+  /* bottom: 10px; */
+  position: absolute;
+}
+
+.teabox {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin: auto 20px;
+  background-color: rgba(28, 110, 164, 0.21);
+    border: 5px ridge rgba(28, 110, 164, 0.46);
+    border-radius: 10px;
+    padding: 10px 10px 10px 0;
+    margin-bottom: 20px;
+}
+
+
+.descr {
+  /* background-color: rgba(28, 110, 164, 0.04); */
+  border-radius: 5px;
+}
+.onecommentBlock {
+  border: 3px ridge rgba(7, 107, 24, 0.42);
+  background-color: rgba(7, 107, 24, 0.19);
+  border-radius: 10px;
+  padding: 5px 0 5px 0;
+  margin-bottom: 20px;
+}
+
+.commetIcon img {
+  width: 80%;
+}
+
+.commetUser {}
+
+/* .commetUser::before {
+  content: '';
+  background-image: url(/img/user.png);
+  margin-left: 5px;
+  width: 5%;
+  height: 5%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  /* right: 0px; */
+/* bottom: 10px; */
+position: absolute;
+}
+
+*/
